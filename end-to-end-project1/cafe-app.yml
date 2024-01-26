@@ -2,11 +2,11 @@
 - hosts: webservers
   tasks:
     - name: Authenticate with Docker Hub
-      command: sudo docker login -u "saidhuljohny2" -p "John@1234"
+      command: sudo docker login -u "shivapaturi01@gmail.com2" -p "Jaiishva2023@"
       when: docker_hub_username is defined and docker_hub_password is defined
     - name: Clone repository
       git:
-        repo: https://github.com/saidhuljohny2/Cafe-App.git
+        repo: https://github.com/shivapaturi/my_Repo/edit/main/end-to-end-project1/cafe-app.yml.git
         dest: /opt/docker/cafe-app
         clone: yes
         update: yes
@@ -19,5 +19,5 @@
       command: sudo docker tag cafe-app:latest saidhuljohny2/cafe-app:latest
 
     - name: Push Docker image
-      command: sudo docker push saidhuljohny2/cafe-app:latest
+      command: sudo docker push shivapaturi/my_Repo/edit/main/end-to-end-project1/cafe-app:latest
       when: docker_hub_username is defined and docker_hub_password is defined
