@@ -9,6 +9,6 @@ terraform {
 
 # Configure the GCP Provider
 provider "google" {
-  project = "rock-cairn-410706"
+  project = "my-devops-project-b"
   region  = "us-central1"
 }
